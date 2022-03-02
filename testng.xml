@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="rutaOutut" value="./output/"></parameter>
+<parameter name="url" value="https://demo.guru99.com/selenium/newtours/index.php"></parameter>
+<parameter name="rutaImagenReporte" value="./imagenes/logo_periferia.png"></parameter>
+  <test name="Test">
+    <classes>
+      <class name="com.testNG.RunTestNG"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
