@@ -28,7 +28,7 @@ public class PagObjetInicio extends MapObjetInicio
 	// METODO PRIMERA PRUEBA
 	public String busquedaInicial(String firstName, File rutaCarpeta, String generarEvidencia) throws Exception
 	{
-		try
+		try 
 		{
 			tiempoEspera(3);
 			click(register, rutaCarpeta,generarEvidencia);
@@ -38,6 +38,7 @@ public class PagObjetInicio extends MapObjetInicio
 		catch (Exception e) 
 		{
 			System.out.println(e);
+			
 		}
 		String valor = capturarValorSelenium(resultado);
 		return valor;

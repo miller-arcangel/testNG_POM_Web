@@ -30,6 +30,7 @@ public class RunTestNG
 		  				  @Optional("default") String rutaImagenReporte,
 		  				  @Optional("default") String rutaOutut) 
   {	  
+	  url="https://demo.guru99.com/selenium/newtours/index.php";
 	  //ASIGNAR PROPIEDADES A DRIVER 
 	  driver =ClaseBase.chomeDriverConnetion();
 	  //INSTANCIAR LA CLASE 
@@ -42,7 +43,7 @@ public class RunTestNG
 	  generarReportePdf.setRutaImagen(rutaImagenReporte);
 	  claseBase.setRutaOutut(rutaOutut);
   }
-  
+   
   @DataProvider(name="busqueda")
   public Object[][] datos() throws Exception
   {
@@ -60,7 +61,7 @@ public class RunTestNG
 		  String nomTest = Thread.currentThread().getStackTrace()[1].getMethodName();
 		 		 
 		  //ACCEDER A LA URL
-		  pagObjetInicio.urlAcceso();
+		  pagObjetInicio.urlAcceso(); 
 		  
 		  //VALIDAFR SI SE GENERA EVIDENCIA
 		  if (generarEvidencia.contains("Si"))
@@ -89,7 +90,7 @@ public class RunTestNG
 			  valor=pagObjetInicio.busquedaInicial(firstName,rutaCarpeta, generarEvidencia);
 		  }
 		  assert valor.contains(firstName);
-	  }
+	  } 
   }
  
   
